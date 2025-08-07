@@ -46,10 +46,10 @@ const handleRegistration = async() =>{
             return;
         }
         
-        const data = await res.json();
+        let data = await res.json();
         console.log("Parsed response: ", data);  // Removing Error
 
-
+        
 
         if(data.message == "Success"){
             alert(`Registration Successful! \nYour User ID is : ${data.userID} \nPlease save this for login.`);
