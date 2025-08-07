@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: rgb(241, 245, 249);
+}
+
+#headerDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#headerDivLeft{
+    margin-left: 25px;
+}
+
+#headerDivLeft > p{
+    color: rgb(33, 51, 80);
+    font-size: 30px;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+#logout-btn{
+    border: 2px solid rgb(81, 68, 225);
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+    gap: 5px;
+}
+
+#logout-btn:hover{
+    cursor: pointer;
+}
+
+#logout-btn > i{
+    margin-top: 5px;
+    color: rgb(37, 99, 235);
+    font-size: 20px;
+}
+
+#logout-btn > p{
+    color: rgb(37, 99, 235);
+    font-size: 20px;
+}
+
+#firstHr{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 40px;
+    opacity: 0.2;
+}
+
+#mainDiv1{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#mainTxt{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    font-weight: 650;
+    margin-left: 25px;
+    color: rgb(33, 51, 80);
+}
+
+#add-btn{
+    border: none;
+    background-color:rgb(37, 99, 235);
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 25px;
+    gap: 5px; 
+}
+
+#add-btn:hover{
+    cursor: pointer;
+}
+
+#add-btn > i{
+    margin-top: 5px;
+    font-size: 20px;
+    background-color:rgb(37, 99, 235);
+    color: white;
+}
+
+#add-btn > p{
+    color: white;
+    background-color:rgb(37, 99, 235);
+    font-size: 20px;
+}
+
+#totalContacts{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-top: 10px;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 15px;
+    background-color: white;
+}
+
+#totalContacts > i{
+    font-size: 20px;
+    margin-top: 5px;
+    background-color: white;
+}
+
+#ptc{
+    font-size: 20px;
+    margin-left: 8px;
+    background-color: white;
+}
+
+#totalNumber{
+    font-size: 20px;
+    margin-top: 1px;
+    color: green;
+    background-color: white;
+}
+
+#srcDiv{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 60%;
+    display: flex;
+}
+
+#srcBox{
+    font-size: 18px;
+    margin: 0 auto;
+    width: 95%;
+    height: 40px;
+    padding: 20px;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+    background-color: white;
+}
+
+#srcBtn{
+    width: 5%;
+    height: 40px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+}
+
+#srcBtn:hover{
+    cursor: pointer;
+}
+
+#srcBtn > i{
+    font-size: 15px;
+    background-color: white;
+}
+
+#mainContainer{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#headerContainer{
+    border: 1px solid black;
+    border-radius: 8px 8px 0 0;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr 0.5fr;
+    padding: 5px 20px;
+}
+
+#mainDataContainer{
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 0 0 8px 8px;
+}
+
+.hData{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.headerMail{
+    margin-left: 75px;
+}
+
+.dataContainer{
+    border-bottom: 1px solid black;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1fr 0.5fr;
+    margin-top: 5px 5px;
+}
+
+.data{
+    color: rgb(33, 51, 80);
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    font-weight: 500;
+}
+
+.action-btn{
+    background: none;
+    border: none;
+    margin-top: 10px;
+}
+
+.action-btn:hover{
+    cursor: pointer;
+    color: gray;
+    transition: 0.5s;
+}
+
+.fa-solid{
+    font-size: 25px;
+}
+
+.bin{
+    margin-left: 8px;
+}
+
+
+/* Transparent Modal */
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.hidden{
+    display: none;
+}
+
+.modal::backdrop{
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content{
+    border: 1px solid rgb(204, 202, 202);
+    background-color: rgb(245, 243, 243);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: rgb(37, 99, 235);
+}
+
+.cross{
+    font-size: 40px;
+    float: right;
+    width: 5%;
+    margin-left: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: top; 
+}
+
+.cross:hover{
+    opacity: 0.7;
+}
+
+.cross >i{
+    background-color: rgb(224, 222, 222);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.cross > button{
+    border: none;
+}
+
+.cross > button:hover{
+    cursor: pointer;
+}
+
+.modal-content > h1{
+    background-color: rgb(245, 243, 243);
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(33, 51, 80);
+}
+
+
+.modal-content > input{
+    background-color: rgb(245, 243, 243);
+    border: 1px dashed gray;
+    width: 50%;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    align-items: center;  
+}
+
+.button{
+    width: 50%;
+    height: 30px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 4px 4px;
+    border-radius: 8px;
+    color: white;
+    background-color:rgb(37, 99, 235);
+    border: none;
+}
+
+submit:hover{
+    cursor: pointer;
+    background-color: rgb(6, 82, 244);
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboardStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="headerDiv">
+            <div id="headerDivLeft">
+                <p>
+                    Welcome, <span id="loged-username">User!</span>
+                </p>
+            </div>
+
+            <div id="hearderDivRight">
+                <button onclick="logout()" id="logout-btn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Logout</p>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <hr id="firstHr">
+
+    <div id="addContactModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="cross"> <button onclick="closeModal()" id="cross-btn" ><i class="fa-solid fa-xmark"></i></button> </div>
+            <h1>Add New Contact</h1>
+                <input type="text" id="contactName" placeholder="Full Name" required>
+                <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <submit onclick="editingContactId ? updateContact() : handleAddNewContact()" class="button" >Save Contact</submit>
+        </div>
+    </div>
+
+    <main>
+        <p id="mainTxt">Contact Manager</p>
+
+            <div id="mainDiv1">
+                <div id="totalContacts">
+                    <i class="fas fa-users"></i>
+                    <p id="ptc">Total Contacts : </p>
+                    <p id="totalNumber">0</p>
+                </div>
+
+                <div id="add-btnDiv">
+                    <button onclick="openModal()" id="add-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        <p>Add Contact</p>
+                    </button>
+                </div>
+            </div>
+
+        
+
+        <div id="srcDiv">
+            <input  type="text" id="srcBox" placeholder="Search contacts..." oninput="searchContact()">
+            <button id="srcBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+
+        <div id="mainContainer">
+            <div id="headerContainer">
+                <div>
+                    <p class="hData">Name</p>
+                </div>
+
+                <div>
+                    <p class="hData">Phone</p>
+                </div>
+
+                <div>
+                    <p class="hData headerMail">Email</p>
+                </div>
+
+                <div>
+                    <p class="hData">Address</p>
+                </div>
+
+                <div>
+                    <p class="hData">Actions</p>
+                </div>
+            </div>
+
+            <div id="mainDataContainer">
+                <div class="dataContainer">
+                    <div>
+                        <p class="data">Apu Sarker</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">01759595959</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">apusarker59@gmail.com</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">Rajshahi</p>
+                    </div>
+                
+                    <div>
+                        <button class="action-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="bin action-btn"><i class="fa-solid fa-trash"></i></i></button>
+                    </div>
+                </div>
+
+                <div class="dataContainer">
+                    <div>
+                        <p class="data">Jahidul Islam</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">01984848484</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">jahidulislam84@gmail.com</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">Dhaka</p>
+                    </div>
+                
+                    <div>
+                        <button class="action-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="bin action-btn"><i class="fa-solid fa-trash"></i></i></button>
+                    </div>
+                </div>
+
+                <div class="dataContainer">
+                    <div>
+                        <p class="data">Raju Ahmed</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">01837373737</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">rajuahmed37@gmail.com</p>
+                    </div>
+                
+                    <div>
+                        <p class="data">Dhaka</p>
+                    </div>
+                
+                    <div>
+                        <button class="action-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="bin action-btn"><i class="fa-solid fa-trash"></i></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+<script src="./fetchData.js"></script>
+</body>
+</html>

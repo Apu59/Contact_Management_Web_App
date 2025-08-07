@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: rgb(8, 68, 199);
+}
+
+#formDiv{
+    display: flex;
+    flex-direction: column;
+    color: rgb(41, 105, 243);
+}
+
+#formDiv > h2{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.inputBox{
+    width: 20%;
+    height: 40px;
+    outline: none;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.btn{
+    width: 20%;
+    height: 40px;
+    margin: 0 auto;
+    padding: 8px 0;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(74, 128, 244);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(41, 105, 243);
+    transition: 0.8s;
+}
+
+#text{
+    margin: 8px;
+    text-align: center;
+}
+
+#regNow{
+    color: rgb(41, 105, 243);
+}
+
+#regBtn:hover{
+    cursor:pointer;
+}
+
+.error{
+    text-align: center;
+    margin-top: 10px;
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
