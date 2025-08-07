@@ -96,6 +96,7 @@ app.post("/saveContact", (req, res) => {
 
 //API getway for registration
 app.post("/register", (req, res) => {
+
     const { userName, userEmail, userPassword } = req.body;
 
     const checkEmail = `SELECT userID FROM users WHERE userEmail = ?`;
@@ -104,13 +105,13 @@ app.post("/register", (req, res) => {
         
         if (err) {
             console.log("Error checking email in database...");
-            return res.json({
+            return res.status(500).json({
                 message : "Error",
             });
         }
 
         if (result.length > 0) {
-            return res.json({
+            return res.status(200).json({
                 message : "Email already exist.",
             });
         }
@@ -120,11 +121,11 @@ app.post("/register", (req, res) => {
         db.query(addNewUser, [userName, userEmail, userPassword], (err, result) => {
             if (err) {
                 console.log("Failed to save user info in database.");
-                return res.json({
+                return res.status(500).json({
                     message : "Error",
                 });
             }
-            return res.json({
+            return res.status(200).json({
                 message : "Success",
                 userID : result.insertId,
             });

@@ -38,9 +38,18 @@ const handleRegistration = async() =>{
             body : JSON.stringify(registrationObject),
         });
 
-        const data = await res.json();
+        console.log("Raw response: ", res); // Removing Error 
 
-         
+        if(!res.ok){ // Removing Error
+            const errorData = await res.json();
+            alert("Registration Failed!" + (errorData.message || ""));
+            return;
+        }
+        
+        const data = await res.json();
+        console.log("Parsed response: ", data);  // Removing Error
+
+
 
         if(data.message == "Success"){
             alert(`Registration Successful! \nYour User ID is : ${data.userID} \nPlease save this for login.`);
@@ -55,6 +64,7 @@ const handleRegistration = async() =>{
         
     }
     catch(err){
+        console.log("Error occurred:", err);  // Removing Error
         alert("Network error. Please try again!");
     }
 
